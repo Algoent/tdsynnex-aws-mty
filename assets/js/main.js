@@ -144,6 +144,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /**
+   * Scroll register button
+   */
+  const scrollRegister = document.querySelector('.scroll-register');
+  if (scrollRegister) {
+    const togglescrollRegister = function() {
+      window.scrollY > 100 ? scrollRegister.classList.add('active') : scrollRegister.classList.remove('active');
+    }
+    window.addEventListener('load', togglescrollRegister);
+    document.addEventListener('scroll', togglescrollRegister);
+    scrollRegister.addEventListener('click', window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    }));
+  }
+
+  /**
    * Initiate Pure Counter
    */
   new PureCounter();

@@ -194,7 +194,7 @@ section {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
+  left: 15px;
   bottom: -15px;
   z-index: 99999;
   background: #ff9900;
@@ -219,6 +219,53 @@ section {
   visibility: visible;
   opacity: 1;
   bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Scroll Register
+--------------------------------------------------------------*/
+.scroll-register {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 20px;
+  top: 20px;
+  z-index: 99999;
+  width: fit-content;
+  height: auto;
+  border-radius: 0px;
+  transition: all 0.4s;
+  background: #7c5aed;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.scroll-register img {
+  width: 30px;
+  padding-right: 5px;
+}
+
+.scroll-register:hover {
+  background: #161e2d;
+  color: #fff;
+}
+
+.scroll-register.active {
+  visibility: visible;
+  opacity: 1;
+  top: 20px;
+}
+
+@media (max-width: 545px) {
+  .scroll-register span{
+    display: none;
+  }
+  .scroll-register img{
+    width: 30px;
+    padding-right: 0px;
+  } 
 }
 
 /*--------------------------------------------------------------
@@ -323,15 +370,16 @@ section {
   z-index: 997;
   height: 90px;
   background-color: var(--color-default);
-}
-
-.header.sticked {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
   height: 70px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header.sticked {
+  background-color: #fff;
 }
 
 .header .logo img {
